@@ -30,16 +30,7 @@ public class IPInjector {
     public ModelAndView render(final HttpServletRequest req, final HttpServletResponse res) {
         ModelAndView mav = soffitRendererController.render(req, res, "testEncrypt");
         mav.addObject("ip", ip);
-        // // logger.error(mav.getModel().get("portalRequest"));
-
-        // // Map m = mav.getModel();
-        // // Iterator it = m.entrySet().iterator();
-        // // while (it.hasNext()) {
-        // //     Map.Entry pair = (Map.Entry)it.next();
-        // //     logger.error(pair.getKey() + " = " + pair.getValue());
-        // // }
-        logger.error(mav.getModel().toString());
-
+        
         return mav;
     }
 
