@@ -6,12 +6,13 @@ import $ from 'jquery';
 class App extends Component {
 
 /* global token */
+/* global ip */
 
   componentDidMount() {
     $.ajax({
-      url: 'http://{IPADDRESS}:8092/api/v1/status',
+      url: 'http://' + ip + '/api/v1/status',
       type: 'POST',
-      data: { "token": token.encryptedToken },
+      data: { "token": token },
       error: function (xhr, status, err) {
         console.error(status, err.toString());
       }
